@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				55356B22240420FC00715859 /* supporting files */,
-				55356B022404207800715859 /* MapViewController.swift */,
 				55356B042404207800715859 /* Main.storyboard */,
+				55356B022404207800715859 /* MapViewController.swift */,
 				55356B202404209100715859 /* CoreLocationSession.swift */,
 				55356B0C2404207900715859 /* Info.plist */,
 			);

@@ -84,10 +84,12 @@ class CoreLocationSession: NSObject {
     CLGeocoder().geocodeAddressString(addressString) { (placemarks, error) in
       if let error = error {
         print("geocodeAddressString: \(error)")
+        completion(.failure(error))
       }
       if let firstPlacemark = placemarks?.first,
         let location = firstPlacemark.location {
         print("place name coordinate is \(location.coordinate)")
+        completion(.success(location.coordinate))
       }
     }
   }

@@ -27,6 +27,17 @@ class MapViewController: UIViewController {
 
     }
     
+    private func convertPlaceNameToCoordinate(_ placeName: String){
+        locationSession.convertPlaceNameToCoordinate(addressString: placeName) { (result) in
+            switch result {
+            case .failure(let error):
+                print("geocoding error: \(error)")
+            case .success(let coordinate):
+                print("coordinate: \(coordinate)")
+            }
+            
+        }
+    }
 
 }
 
